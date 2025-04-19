@@ -1,38 +1,22 @@
 services:
-  frontend:
-    image: example/webapp
+  admin:
+    build: ./admin
+    image: deepika033/login_page:1.1
     ports:
-      - "443:8043"
-    networks:
-      - front-tier
-      - back-tier
-    configs:
-      - httpd-config
-    secrets:
-      - server-certificate
+      - "8080:80"
+  student:
+    build: ./student
+    image: deepika033/login_page:2.1
+    ports:
+      - "8081:80"
+  trainer:
+    build: ./admin
+    image: deepika033/login_page:3.1
+    ports:
+      - "8082:80"
+  nginx:
+    image: nginx
+    ports:        
+      - "80:80"
 
-  backend:
-    image: example/database
-    volumes:
-      - db-data:/etc/data
-    networks:
-      - back-tier
 
-volumes:
-  db-data:
-    driver: flocker
-    driver_opts:
-      size: "10GiB"
-
-configs:
-  httpd-config:
-    external: true
-
-secrets:
-  server-certificate:
-    external: true
-
-networks:
-  # The presence of these objects is sufficient to define them
-  front-tier: {}
-  back-tier: {}
