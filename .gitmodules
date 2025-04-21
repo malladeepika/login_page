@@ -1,0 +1,9 @@
+[submodule "ecommm"]
+	path = ecommm
+	url = https://github.com/malladeepika/ecomm.git
+[submodule "foood"]
+	path = foood
+	url = https://github.com/malladeepika/food.git
+[submodule "msg-app"]
+	path = msg-app
+	url = https://github.com/malladeepika/messaging-app.git
