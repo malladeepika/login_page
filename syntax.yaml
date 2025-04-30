@@ -1,0 +1,15 @@
+#- ignored by k8s
+key: value
+name: deepika
+course: devops
+city: hyd
+# - set of key value pairs
+trainer:
+  name: deepika
+  city: hy
+  course: devops
+#- array lists-multiple values
+course:
+- aws
+- azure
+- devops  
