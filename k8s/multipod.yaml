@@ -13,6 +13,6 @@ spec:
     ports:
     - containerPort: 80
   - name: c3
-    image: deepika033/login_page
+    image: deepika033/login_page:7.1
     ports:
     - containerPort: 8080
