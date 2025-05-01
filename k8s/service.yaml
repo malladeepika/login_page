@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: login-page-pod
+  name: login-page-service
   labels:
     app: login-page   # ✅ this must match the Service selector
 spec:
-  containers:
-    - name: c1
-      image: deepika033/login_page:3.1
-      ports:
-        - containerPort: 80
+  type: NodePort
+  selector:
+    app: nginx  
+  ports:
+    - Port: 80
+      nodePort: 30007
