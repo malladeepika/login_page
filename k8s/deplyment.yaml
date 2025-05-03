@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: c1
-        image: nginx
+        image: deepika033/login_page:5.1
         ports:
         - containerPort: 80
