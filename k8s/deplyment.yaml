@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: c1
-        image: deepika033/login_page:5.1
+        image: deepika033/food
         ports:
         - containerPort: 80
