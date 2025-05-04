@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: login-page-service
+  name: ecomm-page-service
   labels:
-    app: login-page   # ✅ this must match the Service selector
+    app: ecomm-page   # ✅ this must match the Service selector
 spec:
   type: NodePort
   selector:

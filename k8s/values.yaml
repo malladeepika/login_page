@@ -1,0 +1,15 @@
+deployment:
+  name:  ecomm
+  replicas:  1
+  labels:  ecomm
+  containername:  c1
+  image:  deepika033/ecomm:latest
+  port:  80
+
+
+service:
+  name: ecomm-service
+  type:  NodePort
+  selector:  ecomm
+  port:  80
+  nodeport:  30009
