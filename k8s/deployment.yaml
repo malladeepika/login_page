@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: login
   
 spec:
   # modify replicas according to your case
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: login
   template:
     metadata:
       labels:
-        app: nginx
+        app: login
     spec:
       containers:
       - name: c1
