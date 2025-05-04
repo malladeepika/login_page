@@ -33,7 +33,7 @@ metadata:
   name: login-service
   namespace: dev
   labels:
-    app: login-page   # ✅ this must match the Service selector
+    app: ngnix   # ✅ this must match the Service selector
 spec:
   type: NodePort
   selector:
