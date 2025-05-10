@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+  - name: c1
+    image: nginx
+    ports:
+    - containerPort: 30007
+  - name: c2
+    image: nginx
+    ports:
+    - containerPort: 80
+  - name: c3
+    image: deepika033/food
+    ports:
+    - containerPort: 8080
+  - name: c3
+    image: deepika033/login_page:5.1
+    ports:
+    - containerPort: 80
