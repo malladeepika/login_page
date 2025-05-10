@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: replica
+  labels: 
+    app: nginx
+  
+spec:
+  # modify replicas according to your case
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app:  nginx
+    spec:
+      containers:
+      - name: c1
+        image: deepika033/ecomm:latest
