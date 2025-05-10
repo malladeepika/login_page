@@ -16,7 +16,7 @@ spec:
     image: deepika033/food
     ports:
     - containerPort: 8080
-  - name: c3
+  - name: c4
     image: deepika033/login_page:5.1
     ports:
     - containerPort: 80
