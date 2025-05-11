@@ -1,0 +1,14 @@
+deployment:
+  name: food-app
+  label: food
+  replicas: 1
+  containername: c1
+  image: deepika033/food:latest
+  containerPort: 80
+
+service:
+    name: food-sevice
+    label: food
+    type: NodePort
+    port: 80
+    nodeport: 30009
