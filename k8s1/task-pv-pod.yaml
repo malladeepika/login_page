@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: task-pv-pod
   labels:
-    name: nginx
+    app: nginx
 spec:
   volumes:
     - name: task-pv-storage
